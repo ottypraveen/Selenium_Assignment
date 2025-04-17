@@ -35,9 +35,11 @@ public class BaseTest {
 		//prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
+			//WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ottyp\\chromedriver-win64\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			WebDriverManager.chromedriver().setup();
+			
 			
 			driver = new ChromeDriver(options);
 			
